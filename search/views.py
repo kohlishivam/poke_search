@@ -56,7 +56,7 @@ def srch(request,foo):
 
 #search using get
 def srchget(request):
-
+	search_string = request.GET.get("searchstring") or ''
 	context_dict = {}
 	context_dict['search_string'] = search_string
 	context_dict['result_arr'] = search_pokemon(search_string)
