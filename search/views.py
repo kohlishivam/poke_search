@@ -61,7 +61,7 @@ def srchget(request):
 	context_dict['search_string'] = search_string
 	context_dict['result_arr'] = search_pokemon(search_string)
 	
-	return render(request,'search/searchGET.html',context_dict)
+	return render(request,'search/searchget.html',context_dict)
 
 
 
@@ -71,7 +71,7 @@ def srchredirect(request,search_string):
 	context_dict['result_arr'] = search_pokemon(search_string,
 		result_type='dict')
 	
-	return render(request,'search/searchREDIRECT.html',context_dict)
+	return render(request,'search/searchredirect.html',context_dict)
 
 def srchpost(request):
 	search_string = request.POST.get("searchstring") or ''
@@ -80,7 +80,7 @@ def srchpost(request):
 	context_dict['search_string'] = search_string
 	context_dict['result_arr'] = search_pokemon(search_string)
 	
-	return render(request,'search/searchPOST.html',context_dict)
+	return render(request,'search/searchpost.html',context_dict)
 
 
 
