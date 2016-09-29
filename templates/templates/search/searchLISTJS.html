@@ -7,6 +7,7 @@
 		img{
 			width: 150px;	
 		}
+
 		h2 {
 		  font-family:sans-serif;
 		}
@@ -36,6 +37,7 @@
 		p {
 		  margin:0;
 		}
+
 		input {
 		  border:solid 1px #ccc;
 		  border-radius: 5px;
@@ -96,6 +98,7 @@
 		  top:-10px;
 		  right:-5px;
 		}
+
 	</style>
 
 
@@ -116,10 +119,11 @@
 	    {% for pokemon in result_arr %}
 	    	
 	    	<li>
-	    	  <h3 class="name">{{pokemon.name}}</h3>
+	    	  <h3 class="name">{{pokemon.pokemon_name}}</h3>
 	    	  <p class="born">
-	    	  		<img width='100px' src="{{pokemon.image_url}}">
+	    	  		<img width='100px' src="{{pokemon.pokemon_image}}">
 	    	  </p>
+	    	  <a href='/edit/{{pokemon.id}}'>edit</a>
 	    	</li>
 
 	    {% endfor %}
@@ -127,13 +131,13 @@
 	  </ul>
 
 	</div>
-		<script src="http://listjs.com/no-cdn/list.js"></script>
 	
 {% endblock content %}
 
 
 {% block scripts %}
 	
+	<script src="http://listjs.com/no-cdn/list.js"></script>
 
 	<script type="text/javascript">
 		
@@ -142,11 +146,17 @@
 			//alert(search_string);
 			window.location.href='/searchREDIRECT/'+ search_string;
 		};
+
 		var options = {
 		  valueNames: [ 'name', 'born' ]
 		};
+
 		var userList = new List('users', options);
+
 	</script>
 
 
 {% endblock scripts %}
+
+
+

@@ -1,4 +1,3 @@
-
 {% extends "search/base.html" %}
 
 {% block head %}
@@ -13,9 +12,7 @@
 
 {% block form %}
 
-	<form class="navbar-form navbar-left" method='POST' action='/searchPOST'>
-		
-		{% csrf_token %}
+	<form class="navbar-form navbar-left" method='GET' action='/searchGET'>
 
 	  <div class="form-group">
 	    <input type="text" name='searchstring' class="form-control" placeholder="Search">
@@ -39,10 +36,11 @@
 		<img src='{{value}}'>
 	{% endfor %}
 
+	
+	<br>
+	<code>
+		{{result_arr}}
+	</code>
 
 {% endblock content %}
-
-
-
-
 

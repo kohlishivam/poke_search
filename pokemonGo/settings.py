@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '906z!%)x=iy!!im*36uib67bfas@bvh@)a_=&turb6@&atcv@a'
+SECRET_KEY = '#8x=&el_j3&f$x)f8l&6yk13mct0k$qj$xtk!9*zs169a0ju@6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -53,19 +53,26 @@ ROOT_URLCONF = 'pokemonGo.urls'
 
 WSGI_APPLICATION = 'pokemonGo.wsgi.application'
 
-
-
-
 #added code
 
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
-TEMPLATE_DIRS=(
+TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
 
+STATIC_PATH = os.path.join(BASE_DIR,'static')
+
+STATIC_URL = '/static/' 
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
 
 #end of added code
+
+
+
 
 
 

@@ -1,7 +1,12 @@
 {% extends "search/base.html" %}
 
 {% block head %}
-    hello
+	<title> {{date}} </title>
+	<style type="text/css">
+		img{
+			width: 60px;	
+		}
+	</style>
 {% endblock head %}
 
 
@@ -26,13 +31,16 @@
 
 	<p>Results:</p>
 
-	{% for key,value in result_arr %}
+	{% for key,value in result_arr2 %}
 		<p>{{key}}</p>
 		<img src='{{value}}'>
 	{% endfor %}
 
+	
+	<br>
+	<code>
+		{{result_arr}}
+	</code>
 
 {% endblock content %}
-
-
 

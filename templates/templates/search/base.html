@@ -7,6 +7,27 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     {% block head %}{% endblock %}
     
+    <meta itemprop="name" content="Pokedex on heroku">
+    <meta name="description" content="Pokemon Search database"/>
+
+    <!-- <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGiscQF2snEAdrORDHSojQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZvsToGltf/EaXn/xe67f8Cu+//Abnv/wCq5/8Acq+lAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADm74/8Lqe3/CMH7/xLQ//893f//DtP//yfa//8W0Pz/AKHf/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADm74/9Qw/H/Ms7+/0LV//+B4///SN7//zfe//8L1///AtD//xG37/8Gb7FpAAAAAAAAAAAAAAAAAAAAAAAAAAAltef/TNX+/0Pa//945///iev//4Hr//9P5P//DNr//wLT//8Av/j/Obvj/wAAAAAAAAAACaR9/yOXdcEIbJfeJbbi/4Pr/v+Z7f//ovH//3zs//9m6f//Gd3//yri//8B0f//AMf7/zm74/8AAAAAAAAAAAusg/8X0an/Dppq/1G2yv+J5/b/uPb//7z2//+F7///M+b//ynk//8W4P//C93//w7J+/85u+P/AAAAAAAAAAAKo3r/IquH/xfTpv8Vj3//i9/o/8f4//+19///Uuz//3Lv//9L6///HeX//wzX//8Ayvj/AH+6fwAAAAAAAAAAD5BpZSLAmf8Y3bT/Fr+S/3LN1v/D+P7/sff//5H0//9F7f//Muv//wDk//8A3///AMDv/wAAAAAAAAAAAAAAAAAAAAAcwp3/GOTB/xfNoP9DtsH/tff9/6v3//9f8f//Te///z3u//9O7f//Bdb6/zm74/8AAAAAAAAAAAAAAAAAAAAACriU/yC+m/8Y3bb/DKh8/2Pu/f+T9v//c/P//y3t//826v//Itz7/wCl1v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARvp3/E9Sz/wmhfP872Pj/Ot36/yPc+v8t2Pj/FsPq/wCMv+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADGtPUAxrT/8TakmuJaR//yakgP8jl3X/GHxZ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxrT7wMa092AAAAAAAAAAAMa08zDGtPcCOXda0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP/nAAD+AwAA+AMAAPADAADwAQAAgAEAAIABAACAAwAAwAMAAMADAADABwAA4A8AAPA/AADvvwAA//8AAA==" rel="icon" type="image/x-icon" /> -->
+
+    <link rel="icon" 
+          type="image/ico" 
+          href="http://pokemondb.net/favicon.ico">
+
+
+    <link rel="icon" 
+          type="image/ico" 
+          href="/static/favicon.ico">
+
+    {% load staticfiles %}
+    <link rel="icon" 
+          type="image/ico" 
+          href="{% static 'favicon.ico' %}">
+
+
+    {% block meta %}{% endblock %}
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -59,6 +80,7 @@
 
       <div class="col-md-12">
 
+            {% block content %}{% endblock %}
 
       </div>
     
@@ -71,8 +93,6 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-            {% block content %}{% endblock %}
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
       {% block scripts %}{% endblock %}
